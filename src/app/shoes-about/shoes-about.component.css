@@ -1,0 +1,18 @@
+.text-abouth{
+    text-align: center;
+
+}
+
+h3{
+    color: blueviolet;
+    text-align: center;
+    text-decoration: dotted;
+}
+
+ div{
+    border-bottom: solid  1px black; 
+    background-color: blanchedalmond;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+

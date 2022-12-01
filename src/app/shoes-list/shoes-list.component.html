@@ -1,0 +1,34 @@
+<h1>Lista de Calzados</h1>
+<table class="table text-center">
+    <thead>
+        <tr>
+            
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th>Talle</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th></th>
+            <th>Cantidad</th>
+            <th>Compra</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let shoe of shoes">
+            <td>{{shoe.modelo}}</td>
+            <td>{{shoe.marca}}</td>
+            <td>{{shoe.talle}}</td>
+            <td>{{shoe.precio | currency}}</td>
+            <td> <span class="badge text-bg-warning"  *ngIf="shoe.stock==0">Sin Stock</span></td>
+            <td><img width="100" class="img-thumbnail"  [src]="shoe.imagen" [alt]="shoe.modelo"></td>
+             <td class="flex">
+               <app-input-cantidad [(quantity)] = "shoe.quantity" [max]="shoe.stock" *ngIf="shoe.stock" (maxShoe)="maxShoe($event)" ></app-input-cantidad>
+            </td>
+            <td>
+               <button class="btn btn-success" (click)="aggCar(shoe)" >Comprar</button>
+            </td> 
+                 
+        </tr>
+ 
+    </tbody>
+</table>

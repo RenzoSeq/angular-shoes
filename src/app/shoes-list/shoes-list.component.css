@@ -1,0 +1,11 @@
+h1 {
+    color:rgb(39, 39, 39);
+}
+
+td {
+    vertical-align: middle;
+}
+
+.flex{
+    width: 100px;
+}

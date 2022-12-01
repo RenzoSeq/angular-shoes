@@ -1,0 +1,10 @@
+<div class="bodyCart">
+    <h3>Tu pedido </h3>
+    <ul>
+        <li *ngFor="let shoe of shoeList$ | async ">  
+            {{shoe.modelo}}
+            {{shoe.quantity}}
+        </li>
+    </ul>
+
+</div>
